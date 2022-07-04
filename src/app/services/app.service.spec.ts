@@ -19,9 +19,4 @@ describe('AppService', () => {
     window.localStorage.setItem('token', 'FAKE_TOKEN');
     expect(spectator.service.isAuthenticated()).toBeTruthy();
   });
-
-  it('should call with token', () => {
-    window.localStorage.setItem('token', 'FAKE_TOKEN');
-    expect(spectator.service.isAuthenticated()).toBeTruthy();
-  });
 });

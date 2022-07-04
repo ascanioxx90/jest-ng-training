@@ -1,7 +1,6 @@
 import {Spectator, createRoutingFactory, byText} from '@ngneat/spectator';
 import {UserComponent} from "./user.component";
 import {UserResolver} from "../../resolvers/user.resolver";
-import {createHost} from "@angular/compiler/src/core";
 
 describe('UserComponent', () => {
   let spectator: Spectator<UserComponent>;
