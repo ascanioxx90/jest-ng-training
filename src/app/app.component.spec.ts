@@ -1,12 +1,13 @@
 import {Spectator, createComponentFactory, byText} from '@ngneat/spectator';
 import {AppComponent} from "./app.component";
-import {Router} from "@angular/router";
+import {ChildrenOutletContexts, Router, RouterModule} from "@angular/router";
 
 describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
   const createComponent = createComponentFactory({
     component: AppComponent,
-    mocks: [Router]
+    imports: [RouterModule],
+    mocks: [Router, ChildrenOutletContexts]
   });
 
   beforeEach(() => spectator = createComponent());
